@@ -3,12 +3,13 @@ import './TodoItems.css';
 
 const TodoItems = (props) => {
     const items = props.items;
+    const deleteItem = props.deleteItem;
     const listItems = items.map(item => {
         return(
             <div key={item.id}>
                 <span>{item.name}</span>
                 <span>{item.age}</span>
-                <span>&times;</span>
+                <span onClick={() => deleteItem(item.id)}>&times;</span>
             </div>
         )
     })
