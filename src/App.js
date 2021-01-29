@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
          TodoList App
-         <TodoItems />
+         <TodoItems items={this.state.items}/>
          <AddItems />
       </div>
     );
